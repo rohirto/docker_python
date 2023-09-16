@@ -6,7 +6,8 @@
   },
   "extensions": [
     "ms-python.python", // Install the Python extension for Visual Studio Code
-    "donjayamanne.python-extension-pack" // Install Python extension pack for additional features
+    "donjayamanne.python-extension-pack", // Install Python extension pack for additional features
+    "ms-python.pylint"  //Linting for python
   ],
   "forwardPorts": [5678], // Forward port 5678 for debugging
   "appPort": [80], // If needed, forward additional ports

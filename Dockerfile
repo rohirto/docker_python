@@ -7,6 +7,14 @@ RUN pip install ptvsd
 # Install Git
 RUN apt-get update && apt-get install -y git
 
+# Install libraries
+RUN pip install matplotlib
+RUN pip install tensorflow
+RUN pip install numpy 
+RUN pip install opencv-python
+RUN pip install cvlib
+
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 # Set the working directory inside the container
 WORKDIR /workspace
 
