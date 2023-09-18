@@ -53,3 +53,10 @@ point = 3, 4, 7, 8, 9
 # Unpacking a tuple into variables
 x, y, *z = point
 print(f"x: {x} y: {y} z:{z}")
+
+#sets
+skills = {'Python', 'HTML', 'CSS', 'SQL'}
+job_skills = {'HTML', 'NodeJS', 'C#'}
+
+matched_skills = skills & job_skills  #Intersection &, Union |
+print(matched_skills.pop())
