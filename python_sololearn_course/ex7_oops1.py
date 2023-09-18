@@ -6,6 +6,13 @@ class Dog:
     """Dog class
     """
     def __init__(self, name, breed):
+        """This is a Dunder method: Double underscore  methods
+        This is not called by user, but by python when something is happening
+
+        Args:
+            name (_type_): _description_
+            breed (_type_): _description_
+        """
         self.name = name
         self.breed = breed
 
