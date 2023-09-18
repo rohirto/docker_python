@@ -8,11 +8,14 @@ RUN pip install ptvsd
 RUN apt-get update && apt-get install -y git
 
 # Install libraries
+# Data Processing
 RUN pip install matplotlib
 RUN pip install tensorflow
 RUN pip install numpy 
 RUN pip install opencv-python
 RUN pip install cvlib
+# Web related
+RUN pip install django
 
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 # Set the working directory inside the container
