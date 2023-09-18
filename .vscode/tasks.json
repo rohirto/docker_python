@@ -12,6 +12,19 @@
                 "kind": "build",
                 "isDefault": true
             }
-        }
+        },
+        {
+            "label": "Run Django Development Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/helloworldproject/manage.py",
+            "args": [
+              "runserver",
+              "0.0.0.0:8000"
+            ],
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
+          }
     ]
 }
