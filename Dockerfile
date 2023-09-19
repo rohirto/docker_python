@@ -17,6 +17,9 @@ RUN pip install cvlib
 RUN pip install pandas
 # Web related
 RUN pip install django
+# Jupyter
+RUN pip install jupyter
+RUN pip install ipykernel
 
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 # Set the working directory inside the container

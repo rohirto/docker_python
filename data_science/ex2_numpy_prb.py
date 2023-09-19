@@ -20,52 +20,13 @@ Sample Output
 [1.25 2.45]
 """
 import numpy as np
-def get_user_input():
-    """Get proper data from the User
-
-    Raises:
-        ValueError: if the user enters incorrect data
-
-    Returns:
-        values: if data is correct
-    """
-    while True:
-        try:
-            user_input = input("Enter r and c as space-separated integers: ")
-            values = [int(x) for x in user_input.split()] # List cpmprehension to take input
-                                                            # from user and convert to int
-            if len(values) != 2:
-                raise ValueError("Please enter exactly two integers separated by a space.")
-            return values
-        except ValueError as e_n:
-            print(f"Invalid input: {e_n}. Please try again.")
-def get_user_input_float(p):
-    """Get proper data from the User
-
-    Raises:
-        ValueError: if the user enters incorrect data
-
-    Returns:
-        values: if data is correct
-    """
-    while True:
-        try:
-            user_input = input("Enter Elements as space-separated floats: ")
-            values = [float(x) for x in user_input.split()] # List cpmprehension to take input
-                                                            # from user and convert to float
-            if len(values) != p:
-                raise ValueError("Please enter exactly {p} floats separated by a space.")
-            return values
-        except ValueError as e_n:
-            print(f"Invalid input: {e_n}. Please try again.")
-
-
+from z_get_user_input import get_user_input, get_user_input_float
 
 # 2 approaches - first is mine and second is chatgpt
 APPROACH = int(input("Options:\n1.mine\n2.chatgpt"))   # can be "mine" or "chatgpt"
 if APPROACH == 1:
     # My attempt
-    n, p = get_user_input()
+    n, p = get_user_input(2)
     arr = []
     for i in range(n):
         arr = arr + get_user_input_float(p)
