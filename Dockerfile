@@ -14,6 +14,7 @@ RUN pip install tensorflow
 RUN pip install numpy 
 RUN pip install opencv-python
 RUN pip install cvlib
+RUN pip install pandas
 # Web related
 RUN pip install django
 
