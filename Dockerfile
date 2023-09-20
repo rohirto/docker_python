@@ -15,6 +15,7 @@ RUN pip install numpy
 RUN pip install opencv-python
 RUN pip install cvlib
 RUN pip install pandas
+RUN pip install -U scikit-learn
 # Web related
 RUN pip install django
 # Jupyter

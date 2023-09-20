@@ -11,6 +11,7 @@
     },
     "python.analysis.completeFunctionParens": true,
     "python.analysis.extraPaths": [
-        "./data_science"
+        "./data_science",
+        "./data_science/datasets"
     ]
 }
