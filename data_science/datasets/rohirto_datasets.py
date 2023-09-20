@@ -4,11 +4,19 @@ This is my library to load custom libraries into my projects
 
 # Boston Data set
 import pandas as pd
-import numpy as np
-
 boston = pd.read_csv('/workspaces/docker_python/data_science/datasets/bostondataset.csv',nrows=506)
 
 def load_boston_data():
+    """Returns the pandas dataframe made from bostondata csv
+
+    Returns:
+        df: Dataframe containing the boston housing data
+    """
+    # Calculate column means (ignoring NaN values)
+    column_means = boston.mean()
+    # Fill the Nan with the mean value as the Linear regression wont work
+    for col in boston.columns:
+        boston[col] = boston[col].fillna(column_means[col])
     return boston
 
 # import pandas as pd  # doctest: +SKIP
