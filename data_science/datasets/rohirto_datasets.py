@@ -19,6 +19,22 @@ def load_boston_data():
         boston[col] = boston[col].fillna(column_means[col])
     return boston
 
+#Iris Dataset
+iris = pd.read_csv('/workspaces/docker_python/data_science/datasets/iris.csv',nrows=152)
+
+def load_iris_data():
+    """Returns the pandas dataframe made from bostondata csv
+
+    Returns:
+        df: Dataframe containing the boston housing data
+    """
+    # Calculate column means (ignoring NaN values)
+    column_means = iris.mean()
+    # Fill the Nan with the mean value as the Linear regression wont work
+    for col in iris.columns:
+        iris[col] = iris[col].fillna(column_means[col])
+    return iris
+
 # import pandas as pd  # doctest: +SKIP
 # import numpy as np
 
