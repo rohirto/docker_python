@@ -12,6 +12,7 @@
     "python.analysis.completeFunctionParens": true,
     "python.analysis.extraPaths": [
         "./data_science",
-        "./data_science/datasets"
+        "./data_science/datasets",
+        "./weather_model/src"
     ]
 }
