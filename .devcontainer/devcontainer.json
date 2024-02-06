@@ -12,8 +12,6 @@
     "mechatroner.rainbow-csv"
   ],
   "forwardPorts": [5678], // Forward port 5678 for debugging
-  "appPort": [80], // If needed, forward additional ports
-  "mounts": [
-    "source=${localWorkspaceFolder}/path/to/your/code,target=/workspace,type=bind"
-  ]
+  "appPort": [80] // If needed, forward additional ports
+  
 }
